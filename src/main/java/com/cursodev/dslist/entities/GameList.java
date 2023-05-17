@@ -13,7 +13,7 @@ public class GameList {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String nome;
+	private String name;
 	
 	public GameList() {
 		
@@ -21,7 +21,7 @@ public class GameList {
 
 	public GameList(Long id, String nome) {
 		this.id = id;
-		this.nome = nome;
+		this.name = nome;
 	}
 
 	public Long getId() {
@@ -33,11 +33,11 @@ public class GameList {
 	}
 
 	public String getNome() {
-		return nome;
+		return name;
 	}
 
 	public void setNome(String nome) {
-		this.nome = nome;
+		this.name = nome;
 	}
 
 	@Override
