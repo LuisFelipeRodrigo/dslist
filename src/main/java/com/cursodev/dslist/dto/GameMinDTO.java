@@ -1,6 +1,7 @@
 package com.cursodev.dslist.dto;
 
 import com.cursodev.dslist.entities.Game;
+import com.cursodev.dslist.projections.GameMinProjection;
 
 public class GameMinDTO {
 	private Long id;
@@ -12,6 +13,13 @@ public class GameMinDTO {
 
 	public GameMinDTO(){
 	
+	}
+	public GameMinDTO(GameMinProjection projection) {
+		id = projection.getId();
+		title = projection.getTitle();
+		year = projection.getYear();
+		imgUrl = projection.getImgUrl();
+		shortDescription = projection.getShortDescription();
 	}
 
 	public GameMinDTO(Game entity) {
